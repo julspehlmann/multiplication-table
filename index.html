@@ -1,0 +1,72 @@
+<!--
+Julia Spehlmann, UMass Lowell Computer Science, julia_spehlmann@student.uml.edu
+COMP 4610 GUI Programming I
+Assignment 6: Creating an Interactive Dynamic Table
+Copyright (c) 2018 by Julia Spehlmann. All rights reserved.
+Updated by JS on November 12, 2018 at 8:50 AM
+File: index.html
+Description: The purpose of this application is to create an application consisting of a dynamic
+multiplication table base on arbitrary user inputs
+-->
+
+<!-- declaration of the HTML version the document is written in -->
+<!DOCTYPE html>
+
+<!-- marks the start and primary language (english) of the document -->
+<html lang="en">
+  <head>
+
+    <!-- specify character encoding as utf-8 -->
+    <meta charset="utf-8">
+
+    <!-- gives the page a title -->
+    <title>Multiplication Table</title>
+
+    <!-- links CSS file to control appearnce of page and bootstrap link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <!-- links a JS file to control interactions on the page -->
+    <script src="./js/script.js"></script>
+  </head>
+
+  <!-- all content in the body will be displayed in main browser window -->
+  <body>
+
+    <!-- bootstrap styling for a jumbotron as a header -->
+  <div class="jumbotron">
+    <h1 class="display-4">Learn Your Multiplication Tables</h1>
+    <p class="lead">Practice your multiplication tables by submitting a starting number and an ending number.</p>
+    <hr class="my-4">
+    <p>Get started below!</p>
+  </div>
+
+  <!-- bootstrap styling for form -->
+   <form onsubmit="return startMultTable()">
+     <div class="form-group">
+       <label for="multiplier-start">Multiplier Starting Number</label>
+       <input type="number" class="form-control" id="multiplier-start" aria-describedby="multiplierConstraint" placeholder="Enter the starting number for your multiplier">
+     </div>
+     <div class="form-group">
+       <label for="multiplier-end">Multiplier Ending Number</label>
+       <input type="number" class="form-control" id="multiplier-end" aria-describedby="multiplierConstraint" placeholder="Enter the ending number for your multiplier">
+       <small id="multiplierConstraint" class="form-text text-muted">Must be greater than or equal to starting number.</small>
+     </div>
+     <div class="form-group second-part">
+       <label for="multiplicand-start">Multiplicand Starting Number</label>
+       <input type="number" class="form-control" id="multiplicand-start" placeholder="Enter the starting number for your multiplicand">
+     </div>
+     <div class="form-group">
+       <label for="multiplicand-end">Multiplicand Ending Number</label>
+       <input type="number" class="form-control" id="multiplicand-end" placeholder="Enter the ending number for your multiplicand">
+       <small id="multiplierConstraint" class="form-text text-muted">Must be greater than or equal to starting number.</small>
+     </div>
+     <button type="submit" class="btn btn-primary">Show me the table!</button>
+   </form>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
