@@ -1,1 +1,36 @@
+/*
+ File: style.css
+ COMP 4610 Assignment:  Creating an Interactive Dynamic Table
+ Julia Spehlmann, UMass Lowell Computer Science, julia_spehlmann@student.uml.edu
+ Copyright (c) 2018 by Julia Spehlmann. All rights reserved.
+ Updated by JS on November 12, 2018 at 3:35 PM
 
+ This file styling to my multiplication web application.
+ Most of the styling used for this app is Bootstrap
+*/
+
+/* changes header color and makes it bold */
+.jumbotron h1 {
+  color: #1f3d7a;
+  font-weight:bold;
+}
+/* separates multiplcand and multiplier info */
+.second-part {
+  margin-top: 40px;
+}
+
+/* adds spacing between table and button */
+.table {
+  margin-top: 40px;
+}
+
+/* customizes background color for table data*/
+.table tr {
+  background-color: rgb(233, 236, 239);
+}
+
+/* removes background from table headers for better visibility */
+.table th {
+  background-color: white;
+  color: black;
+}
