@@ -3,7 +3,7 @@ Julia Spehlmann, UMass Lowell Computer Science, julia_spehlmann@student.uml.edu
 COMP 4610 GUI Programming I
 Assignment 6: Creating an Interactive Dynamic Table
 Copyright (c) 2018 by Julia Spehlmann. All rights reserved.
-Updated by JS on November 12, 2018 at 3:35 PM
+Updated by JS on November 14, 2018 at 2:35 PM
 File: script.js
 Description: The functionality behind creating a dynamic multiplication table including
 validation of inputs
@@ -16,8 +16,8 @@ function startMultTable(){
   var multiplierEnd = parseInt(document.getElementById("multiplier-end").value, 10);
   var multiplicandStart = parseInt(document.getElementById("multiplicand-start").value, 10);
   var multiplicandEnd = parseInt(document.getElementById("multiplicand-end").value, 10);
-  if (multiplierStart >= 1000 || multiplicandStart >= 1000 || multiplicandEnd >= 1000 || multiplierEnd >= 1000) {
-    alert("Invalid Input! Starting point and ending point must be less than 1000");
+  if (multiplierEnd - multiplierStart >= 1000 || multiplicandEnd - multiplicandStart >= 1000 ) {
+    alert("Invalid Input! Range of multiplier and multiplicand should be less than 1000");
   } else if (multiplierStart > multiplierEnd || multiplicandStart > multiplicandEnd) {
     alert("Invalid Input! Starting point must be less than or eual to ending point for multiplier and multiplicand");
   }else {
